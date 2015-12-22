@@ -1,8 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
 
-## Write a short comment describing this function
-
+## Function "makeCacheMatrix" takes a square matrix as an input,
+## stores her, and creates a list of functions which are used later
 makeCacheMatrix <- function(a=matrix()){
         inv <- NULL
         
@@ -29,7 +27,7 @@ makeCacheMatrix <- function(a=matrix()){
               getInv = getInv)
 }
 
-## Write a short comment describing this function
+
 ## Function "cacheSolve" takes output from function "makeCacheMatrix"
 ## as an input
 cacheSolve <- function(a, ...){
@@ -50,5 +48,5 @@ cacheSolve <- function(a, ...){
         data <- a$get()         ## our matrix is assign to variable "data"
         inv <- solve(data)      ## calculates invers matrix
         a$setInv(inv)
-        inv
+        inv                     ## Function return an invers matrix
 }
